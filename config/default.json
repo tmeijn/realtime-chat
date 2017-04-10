@@ -1,0 +1,10 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "mongodb": "mongodb://localhost:27017/realtimeChat",
+  "public": "../public/",
+  "auth": {
+    "secret": "vb63rm+ZrsC0Q4EufWxMy99kCgvF+27vwnr7MiYOo+l4hD+58OUjpWVh80kBeXOiLBCL42jipJr/W8r0GiIVug=="
+  }
+}
+
