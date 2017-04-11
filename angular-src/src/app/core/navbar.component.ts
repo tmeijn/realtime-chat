@@ -1,3 +1,4 @@
+import { RestService } from './services/feathers.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 
@@ -9,10 +10,12 @@ import { Router } from "@angular/router";
 export class NavbarComponent implements OnInit {
 
   constructor(
-    private _router: Router
+    private _router: Router,
+    private _restService: RestService
   ) { }
 
   ngOnInit() {
+    this._restService.authenticate('e@e.com', 'gamepro1');
   }
 
 }

@@ -5,6 +5,7 @@ import { NavbarComponent } from './navbar.component';
 import { AuthService } from "app/core/services/auth.service";
 import { ExtendedHttpService } from './services/extended-http.service';
 import { RouterModule } from "@angular/router";
+import { RestService, SocketService } from './services/feathers.service';
 
 @NgModule({
   imports: [
@@ -19,7 +20,9 @@ import { RouterModule } from "@angular/router";
   ],
   providers: [
     AuthService,
-    ExtendedHttpService
+    ExtendedHttpService,
+    RestService,
+    SocketService
   ]
 })
 export class CoreModule { }
