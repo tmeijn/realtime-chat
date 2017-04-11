@@ -4,10 +4,12 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar.component';
 import { AuthService } from "app/core/services/auth.service";
 import { ExtendedHttpService } from './services/extended-http.service';
+import { RouterModule } from "@angular/router";
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   declarations: [
     NavbarComponent
