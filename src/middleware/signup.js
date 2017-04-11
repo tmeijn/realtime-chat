@@ -8,7 +8,8 @@ module.exports = function(app) {
     app.service('users').create({
       email: body.email,
       password: body.password
-    }).then(user => {console.log(user); res.send('succes!');})
-    .catch(next);
+    }).then(user => { 
+      res.json(user);
+    }).catch(next);
   };
 };
