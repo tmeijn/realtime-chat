@@ -9,7 +9,7 @@ module.exports = function(app) {
       email: body.email,
       password: body.password
     }).then(user => { 
-      res.json(user);
+      res.status(401).json(user);
     }).catch(next);
   };
 };

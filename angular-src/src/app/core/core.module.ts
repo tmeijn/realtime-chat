@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { NavbarComponent } from './navbar.component';
 import { AuthService } from "app/core/services/auth.service";
+import { ExtendedHttpService } from './services/extended-http.service';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { AuthService } from "app/core/services/auth.service";
     NavbarComponent
   ],
   providers: [
-    AuthService
+    AuthService,
+    ExtendedHttpService
   ]
 })
 export class CoreModule { }

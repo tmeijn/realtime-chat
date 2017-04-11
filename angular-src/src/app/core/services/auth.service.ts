@@ -19,10 +19,7 @@ export class AuthService {
     headers.append('Content-Type', 'application/json');
 
     return this._http.post(this.baseUrl + 'signup', user, {headers: headers})
-      .map(res => res.json())
-      .catch(err => {
-        return Observable.throw(err.json());
-      });
+      .map(res => res.json());
   }
 
 }
