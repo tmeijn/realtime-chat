@@ -7,7 +7,7 @@ import * as rest from 'feathers-rest/client';
 import * as authentication from 'feathers-authentication-client';
 
 import { Injectable } from '@angular/core';
-const superagent = require('superagent');
+import superagent from 'superagent';
 
 const HOST = 'http://localhost:3030'; // Your base server URL here
 @Injectable()
@@ -18,7 +18,7 @@ export class RestService {
     this.socket = io(HOST);
 
     this._app = feathers() // Initialize feathers
-      .configure(socketio(this.socket)) // Fire up rest
+      .configure(rest(HOST).superagent(superagent)) // Fire up rest
       .configure(hooks()) // Configure feathers-hooks
       .configure(authentication({
         storage: window.localStorage // Set storage of token
@@ -51,7 +51,7 @@ export class RestService {
     });
   }
 
-  getService(service) {
+  public getService(service) {
     return this._app.service(service);
   }
 }

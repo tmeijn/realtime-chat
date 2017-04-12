@@ -1,0 +1,32 @@
+<h2>{{title}}</h2>
+    <button (click)="retreive()">Retreive Messages</button>
+    <div *ngFor="let message of messages">
+        <div class="box">
+            <article class="media">
+                <div class="media-left">
+                    <figure class="image is-64x64">
+                        <img [src]="message.sentBy.avatar" alt="Image">
+                    </figure>
+                </div>
+                <div class="media-content">
+                    <div class="content">
+                        <p>
+                            <strong>{{ message.sentBy.email }}</strong> <small>{{ message.sentBy._id }}</small> <small>{{ message.createdAt | date: 'medium' }} - {{ message._id }}</small>
+                            <br>
+                            {{message.text}}
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+    <div style="padding-top: 40px">
+        <form (ngSubmit)="sendMessage()">
+            <div class="field">
+                <label for="" class="label">Enter message:</label>
+                <p>
+                    <input class="input" type="text" [(ngModel)]="newMessage" name="model">
+                </p>
+            </div>
+        </form>
+    </div>

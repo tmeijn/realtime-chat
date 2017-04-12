@@ -10,12 +10,10 @@ import { Router } from "@angular/router";
 export class NavbarComponent implements OnInit {
 
   constructor(
-    private _router: Router,
-    private _restService: RestService
+    private _router: Router
   ) { }
 
   ngOnInit() {
-    this._restService.authenticate('e@e.com', 'gamepro1');
   }
 
 }

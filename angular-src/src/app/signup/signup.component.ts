@@ -96,7 +96,9 @@ export class SignupComponent implements OnInit {
     }
 
     this._authservice.registerUser(user).subscribe(data => {
-      console.log('User registered')
+      console.log('User registered', data);
+
+      setTimeout(() => this._router.navigate(['login']), 1000);
       this.postingForm = false;
     }, (err) => { 
       console.log('error:', err.message);

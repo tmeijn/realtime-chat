@@ -8,8 +8,12 @@ module.exports = function(app) {
     app.service('users').create({
       email: body.email,
       password: body.password
-    }).then(user => { 
-      res.json(user);
+    }).then(user => {
+      let data = {
+        success: true,
+        message: 'User has been registered to the database'
+      };
+      res.json(data);
     }).catch(next);
   };
 };
