@@ -19,8 +19,8 @@ export class MessageService {
     private _restService: RestService
   ) {
     // Let's get both the socket.io and REST feathers services for messages!
-    this._rest = _restService.getService('messages');
-    this._socket = _socketService.getService('messages');
+    this._rest = _restService.getService('api/messages');
+    this._socket = _socketService.getService('api/messages');
 
     this._socket.on('created', (message) => this.onCreated(message));
     this._socket.on('updated', (message) => this.onUpdated(message));
