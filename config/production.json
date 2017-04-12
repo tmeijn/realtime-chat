@@ -1,9 +1,4 @@
 {
   "host": "realtime-chat-app.feathersjs.com",
-  "port": 80,
-  "mongodb": "MONGDB_URL",
-  "public": "../public/",
-  "auth": {
-    "secret": "FEATHERS_AUTH_SECRET"
-  }
+  "port": "PORT"
 }

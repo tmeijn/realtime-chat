@@ -10,7 +10,7 @@ import 'rxjs/add/observable/throw';
 @Injectable()
 export class AuthService {
 
-  private baseUrl: string = 'http://localhost:3030/api/';
+  private baseUrl: string = 'http://localhost:3030/';
 
   constructor(private _http: Http) { }
 
@@ -18,7 +18,7 @@ export class AuthService {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
 
-    return this._http.post(this.baseUrl + 'signup', user, {headers: headers})
+    return this._http.post(this.baseUrl + 'users', user, {headers: headers})
       .map(res => res.json());
   }
 

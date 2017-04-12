@@ -1,10 +1,35 @@
 {
   "host": "localhost",
   "port": 3030,
-  "mongodb": "mongodb://localhost:27017/realtimeChat",
   "public": "../public/",
-  "auth": {
-    "secret": "vb63rm+ZrsC0Q4EufWxMy99kCgvF+27vwnr7MiYOo+l4hD+58OUjpWVh80kBeXOiLBCL42jipJr/W8r0GiIVug=="
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "mongodb": "mongodb://localhost:27017/realtime_chat",
+  "authentication": {
+    "secret": "fed3b7027d046ce23e0d5b9a392952b53c98cf8b508626f04a60ff50c01baeca174afa61519b6478f2f3c8aaf1549c80af7352d2835c3c3eef4c9016a86f1bdfb830554b30e6b00105ba226b2326e468c4cb29307b3f25effdde7677acf891a4f88eeb23e3353057c3d12b020cfe58aedfb8c3e6da5e7ec12d9401cec2a61ad261e1a2ea25e5525493b1aaf57c211213785e2a69cd309f86be6b432551b7a8a376a4a780b837e58a853fc264a992d48e9e989dd166bcf6aa8cf5a4ed9943dbde154bd2518233ea761b9acb42694fba67c8d9b1c5904002710fae7a54777157755be36fb222b642bb27a30600a2d00f9667e2acf589694fbe2c235bf5d01fddd0",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "type": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "service": "users",
+      "usernameField": "email",
+      "passwordField": "password"
+    }
   }
 }
-

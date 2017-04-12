@@ -1,24 +1,29 @@
 {
   "name": "realtime-chat",
-  "description": "Demo of a socket based chat app.",
+  "description": "Demo of a realtime chat app using Feathers.js",
   "version": "0.0.0",
   "homepage": "",
-  "main": "src/",
+  "main": "server",
   "keywords": [
     "feathers"
   ],
-  "license": "MIT",
-  "repository": {},
-  "author": {},
+  "author": {
+    "name": "Tyrone Meijn",
+    "email": "tyrone_meijn@hotmail.com"
+  },
   "contributors": [],
   "bugs": {},
+  "directories": {
+    "lib": "server"
+  },
   "engines": {
-    "node": ">= 0.12.0"
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
   },
   "scripts": {
-    "test": "npm run jshint && npm run mocha",
-    "jshint": "jshint src/. test/. --config",
-    "start": "node src/",
+    "test": "npm run eslint && npm run mocha",
+    "eslint": "eslint server/. test/. --config .eslintrc.json",
+    "start": "node server/",
     "mocha": "mocha test/ --recursive"
   },
   "dependencies": {
@@ -27,23 +32,25 @@
     "cors": "^2.8.3",
     "feathers": "^2.1.1",
     "feathers-authentication": "^1.2.1",
+    "feathers-authentication-hooks": "^0.1.1",
     "feathers-authentication-jwt": "^0.3.1",
     "feathers-authentication-local": "^0.3.4",
     "feathers-configuration": "^0.4.1",
     "feathers-errors": "^2.6.3",
     "feathers-hooks": "^1.8.1",
+    "feathers-hooks-common": "^3.0.0",
     "feathers-mongoose": "^5.0.3",
-    "feathers-permissions": "^0.1.1",
-    "feathers-rest": "^1.7.1",
+    "feathers-rest": "^1.7.2",
     "feathers-socketio": "^1.5.2",
+    "helmet": "^3.5.0",
     "mongoose": "^4.9.4",
-    "passport": "^0.3.2",
     "serve-favicon": "^2.4.2",
     "winston": "^2.3.1"
   },
   "devDependencies": {
-    "jshint": "^2.9.4",
+    "eslint": "^3.19.0",
     "mocha": "^3.2.0",
-    "request": "^2.81.0"
+    "request": "^2.81.0",
+    "request-promise": "^4.2.0"
   }
 }
