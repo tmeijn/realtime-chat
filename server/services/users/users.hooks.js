@@ -13,7 +13,7 @@ const restrict = [
   })
 ];
 
-const gravatar = require('../../hooks/gravatar');
+const gravatar = require('../../hooks/gravatar.js');
 
 module.exports = {
   before: {

@@ -10,7 +10,7 @@ module.exports = function (app) {
   
     email: {type: String, unique: true},
     password: { type: String },
-    gravatar: { type: String },
+    avatar: { type: String },
   
   }, { timestamps: true });
 
