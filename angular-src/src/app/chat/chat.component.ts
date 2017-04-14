@@ -10,7 +10,7 @@ import { Subscription } from "rxjs/Subscription";
   providers: [MessageService]
 })
 export class ChatComponent {
-  title = 'app works!';
+  title = 'CHAT LOBBY';
   messages: any[] = [];
   private subscription: Subscription;
   newMessage: string;
@@ -25,7 +25,7 @@ export class ChatComponent {
       this.messages.push(messages);
     }, err => {console.error(err)});
 
-    //this.retreive();
+    this.retreive();
     
     }
 

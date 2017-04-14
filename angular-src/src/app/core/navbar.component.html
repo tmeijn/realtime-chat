@@ -19,15 +19,32 @@
         Profile
       </a>
     </div>
-    <span class="nav-toggle">
+    <span id="nav-toggle" class="nav-toggle" (click)="onMobileNavClick()">
       <span></span>
       <span></span>
       <span></span>
     </span>
-    <div class="nav-right nav-menu">
+    <div id="nav-menu" class="nav-right nav-menu" [class.is-active]="isActive">
       <a 
         class="nav-item is-tab"
         [routerLinkActive]="['is-active']"
+        (click)="onMobileNavClick()"
+        [routerLinkActiveOptions]= "{exact: true}"
+        [routerLink]="['/chat']">
+        Chat
+      </a>
+      <a 
+        class="nav-item is-tab"
+        [routerLinkActive]="['is-active']"
+        (click)="onMobileNavClick()"
+        [routerLinkActiveOptions]= "{exact: true}"
+        [routerLink]="['/profile']">
+        Profile
+      </a>
+      <a 
+        class="nav-item is-tab" 
+        [routerLinkActive]="['is-active']"
+        (click)="onMobileNavClick()"
         [routerLinkActiveOptions]= "{exact: true}"
         [routerLink]="['/login']">
         Login
@@ -35,6 +52,7 @@
       <a 
         class="nav-item is-tab"
         [routerLinkActive]="['is-active']"
+        (click)="onMobileNavClick()"
         [routerLinkActiveOptions]= "{exact: true}"
         [routerLink]="['/signup']">
         Signup
