@@ -1,3 +1,4 @@
+import { environment } from '../../../environments/environment.prod';
 import { Injectable } from '@angular/core';
 import { Http, Headers } from "@angular/http";
 
@@ -10,7 +11,7 @@ import 'rxjs/add/observable/throw';
 @Injectable()
 export class AuthService {
 
-  private baseUrl: string = 'http://localhost:3030/';
+  private baseUrl: string = environment.apiBaseUrl;
 
   constructor(private _http: Http) { }
 

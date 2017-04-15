@@ -1,3 +1,4 @@
+import { environment } from '../../../environments/environment.prod';
 import * as feathers from 'feathers-client';
 import * as socketio from 'feathers-socketio/client';
 import * as io from 'socket.io-client';
@@ -9,7 +10,7 @@ import * as authentication from 'feathers-authentication-client';
 import { Injectable } from '@angular/core';
 import superagent from 'superagent';
 
-const HOST = 'http://localhost:3030'; // Your base server URL here
+const HOST = environment.apiBaseUrl ; // Your base server URL here
 @Injectable()
 export class RestService {
   public socket: io.socket;
