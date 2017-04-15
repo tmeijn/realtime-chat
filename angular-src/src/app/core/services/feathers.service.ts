@@ -47,8 +47,8 @@ export class RestService {
       console.log('User', this._app.get('user'));
       return isAuthenticated = true;
     })
-    .catch(function(error){
-      console.error('Error authenticating!', error);
+    .catch(err => {
+      return false;
     });
   }
 

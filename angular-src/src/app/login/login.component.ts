@@ -37,8 +37,12 @@ export class LoginComponent implements OnInit {
     }
 
     this._restService.authenticate(user.username, user.password).then(data => {
-      //this._router.navigate(['chat']);
-    });
+      if(data) {
+        this._router.navigate(['chat']);
+      } else {
+        console.log(data);
+      }
+    }).catch(err => console.log(err));
   }
 }
 
