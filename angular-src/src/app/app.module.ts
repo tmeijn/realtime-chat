@@ -12,6 +12,7 @@ import { AppRoutingModule } from "app/app-routing.module";
 import { RouterModule } from "@angular/router";
 import { LoginComponent } from './login/login.component';
 import { ChatComponent } from './chat/chat.component';
+import { FlashMessagesModule } from 'angular2-flash-messages';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ChatComponent } from './chat/chat.component';
     HttpModule,
     CoreModule,
     AppRoutingModule,
+    FlashMessagesModule
   ],
   providers: [
     { provide: Http, useClass: ExtendedHttpService }
