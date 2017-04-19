@@ -12,7 +12,7 @@
         Chat
       </a>
       <a 
-        class="nav-item is-tab is-hidden-mobile"
+        class="nav-item is-tab is-hidden-mobile is-disabled"
         [routerLinkActive]="['is-active']"
         [routerLinkActiveOptions]= "{exact: true}"
         [routerLink]="['/profile']">
@@ -26,7 +26,7 @@
     </span>
     <div id="nav-menu" class="nav-right nav-menu" [class.is-active]="isActive">
       <a 
-        class="nav-item is-tab"
+        class="nav-item is-tab is-hidden-tablet"
         [routerLinkActive]="['is-active']"
         (click)="onMobileNavClick()"
         [routerLinkActiveOptions]= "{exact: true}"
@@ -34,7 +34,7 @@
         Chat
       </a>
       <a 
-        class="nav-item is-tab"
+        class="nav-item is-tab is-hidden-tablet"
         [routerLinkActive]="['is-active']"
         (click)="onMobileNavClick()"
         [routerLinkActiveOptions]= "{exact: true}"
